@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('http://localhost:8181');
+		socket.on('welcome', function(data) {
+			console.log('welcome'+data);
+		});
+		socket.on('queueevent', function(data) {
+			console.log('queueevent'+data);
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
